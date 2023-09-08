@@ -1,3 +1,5 @@
+package codealongs.Scanner;
+
 import java.util.Scanner;
 
 public class LearningScanner {
@@ -5,21 +7,18 @@ public class LearningScanner {
         Scanner scanner = new Scanner(System.in);
 
         int myNumber;
-        System.out.println("Please input a number: ");
+        System.out.println("Please choose a number.");
         myNumber = scanner.nextInt();
 
-        System.out.println("Input the average salary: ");
+        System.out.println("Input the avaerage salary: ");
         double avgSalary = scanner.nextDouble();
 
-        scanner.nextLine();
-
-        System.out.println("Please enter a message:");
-        String message = scanner.nextLine();
+        System.out.println("Enter a message:");
+        String message = scanner.next();
 
         System.out.println("Input number: " + myNumber);
-        System.out.println("The average salary is " + avgSalary);
+        System.out.println("The avarage salary is: " + avgSalary);
         System.out.println("The message is: " + message);
-
-        scanner.close();
+        }
     }
-}
+
