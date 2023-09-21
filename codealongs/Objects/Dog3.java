@@ -3,18 +3,29 @@ package codealongs.Objects;
 
 
 public class Dog3 {
-    Dog puppy = new Dog("Akita", "Silver", 4);
-    
-
     public static void main(String[] args) {
-        
-        Dog pup = new Dog("German Shepard", "Black", 3);
-        Dog puppers = new Dog("Bulldog", "Dark brown", 5);
-        
-        
-        System.out.println("There is a " + pup.breed + " that is completely " + pup.color + " and is only " + pup.age + " years old.");
-        System.out.println("There is a " + puppers.breed + " that is completely " + puppers.color + " and is only " + puppers.age + " years old.");
+        Dog2 akita = new Dog2();
 
+        akita.puppers.breed = "American Akita";
+        akita.puppers.color = "black and white";
+        akita.puppers.age = 5;
+        
+        System.out.println("Do you se that " + akita.puppers.breed + " that is " + akita.puppers.color);
+        System.out.println("It is different from that " + akita.pup.breed);
+        
+        Dog bulldog = new Dog();
+        bulldog.breed = "Bulldog";
+        bulldog.color = "brown";
+        bulldog.age = 7;
+
+        Dog silver = akita.puppers;
+        System.out.println("There is also a " + bulldog.breed);
+        System.out.println("As well as another " + silver.breed);
+
+        akita.puppers.breed = "Alaskan Malamut";
+
+        System.out.println(akita.puppers.breed);
+        System.out.println(silver.breed);
 
     }
 }

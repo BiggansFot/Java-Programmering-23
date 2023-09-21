@@ -2,14 +2,9 @@ package codealongs.Objects;
 
 
 
-public class Dog {
-    String breed;
-    String color;
-    int age;
-
-    Dog(String breed, String color, int age) {
-        this.breed = breed;
-        this.color = color;
-        this.age = age;
-    }
+class Dog {
+    public String breed = "Akita";
+    public String color = "Silver";
+    public int age = 3;
+    
 }
