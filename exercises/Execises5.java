@@ -12,7 +12,7 @@ public class Execises5 {
         System.out.println("Write any letter.");
         myChar = scanner.next().charAt(0);
 
-        if (Character.isLetter(myChar) == false && Character.) {
+        if (Character.isLetter(myChar) == false) {
             System.out.println("You did not write a letter.");
         } else if (myChar == 'A' || myChar == 'a' || myChar == 'E' || myChar == 'e' || myChar == 'I' || myChar == 'i' || myChar == 'O' || myChar == 'o' || myChar == 'U' || myChar =='u' || myChar == 'Y' || myChar == 'y'){
             System.out.println(myChar + " is a wowel.");
