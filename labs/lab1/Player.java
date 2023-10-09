@@ -9,6 +9,9 @@ public class Player {
         public String getName() {
             return name;
         }
+        Player(String name) {
+            this.name = name;
+        }
         //Gettermetod till points.
         public int getPoints() {
             return points;
@@ -32,5 +35,9 @@ public class Player {
         //Skapar en tärning knuten till player
         void addDice(int sides) {
             die = new Die(sides);
+        }
+
+        void addDice(int sides, int numberOfDice) {
+            
         }
 }
