@@ -13,6 +13,12 @@ public class DiceGame_multiplayer {
         
         System.out.println("How many sides do you want your die to have?");
         int numberOfSides = scanner.nextInt();
+        Scanner scanDice = new Scanner(System.in);
+        System.out.println("How many dice do you want to roll?");
+        int numberOfDice = scanDice.nextInt();
+        for (Player p : playerNameArray) {
+            AdvancedPlayer.roll();
+        }
         sonja.addDice(numberOfSides);
         for (int x = 1; x <= numberOfRounds; x++) {
             Scanner scanGuess = new Scanner(System.in);
