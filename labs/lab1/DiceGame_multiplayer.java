@@ -3,42 +3,46 @@ import java.util.Scanner;
 
 public class DiceGame_multiplayer {    
     public static void main(String[] args) {
-        Player[] playerNameArray = {new Player("Lisa"), new Player("John"), new Player("Matt"), new Player("Ann")};
-        Scanner scanPlayer = new Scanner(System.in);
+        AdvancedPlayer[] playerNameArray = {new AdvancedPlayer("Lisa"), new AdvancedPlayer("John"), new AdvancedPlayer("Matt"), new AdvancedPlayer("Ann")};
+        /* Scanner scanPlayer = new Scanner(System.in);
         System.out.println("How many players will play? (maximum 4)");
+        int numberOfPlayers = scanPlayer.nextInt(); */
         
         Scanner scanRounds = new Scanner(System.in);
         System.out.println("How many rounds do you want to play?");
         int numberOfRounds = scanRounds.nextInt();
         
-        Scanner scanSides = new Scanner(System.in);
+        /* Scanner scanSides = new Scanner(System.in);
         System.out.println("How many sides do you want your die to have?");
         int numberOfSides = scanSides.nextInt();
-        for (Player p : playerNameArray) {
+        for (AdvancedPlayer p : playerNameArray) {
             p.addDice(numberOfSides);
-        }
+        } */
         
-        Scanner scanDie = new Scanner(System.in);
-        System.out.println("How many dice do you want to roll?");
-        int numberOfDice = scanDie.nextInt();
-        for ()
-
-        private static void takeTurn(playerNameArray);
-
-        for (int x = 1; x <= numberOfRounds; x++) {
-            Scanner scanGuess = new Scanner(System.in);
-            System.out.println("What side do you think the die will land on?");
-            int guessedSide = scanGuess.nextInt();
-            
-            System.out.println(sonja.rollDice());
-            if (guessedSide == sonja.getDiceValue()) {
-                sonja.increaseScore();
-                System.out.println("You guessed correctly");
-                System.out.println("your current score is " + sonja.getPoints());
-            } else {
-                System.out.println("You were incorrect");
+        int totalScore = 0;
+        int roundScore = 0;
+        
+        for (int i = 0; i <= numberOfRounds; i++) {
+            Scanner scanDie = new Scanner(System.in);
+            System.out.println("How many dice do you want to roll? (maximum 3)");
+            int numberOfDice = scanDie.nextInt();
+            for (AdvancedPlayer p : playerNameArray) {
+                p.addDice(numberOfDice);
             }
+            for (AdvancedPlayer p : playerNameArray) {
+                p.rollDice();
+                System.out.println(p.getName() + " rolled: ");
+                p.getDiceValue();
+                System.out.println("That totals: ");
+                roundScore += p.getTotalValue();
+                totalScore = totalScore + roundScore;
+            }
+            
+            
         }
-        System.out.println("Your total score is " + sonja.getPoints());
+        for (AdvancedPlayer p : playerNameArray) {
+            System.out.println(p.getName() + " got a total of:" + totalScore);
+        }
+        //System.out.println("Your total score is " + AdvancedPlayer.getPoints());
     }
 }
