@@ -7,10 +7,8 @@ public class Die {
     private int currentSide;
     Random randomGenerator = new Random();
     //Metod som tar fram en slumpad siffra mellan 0 + 1 och sides -1 + 1.
-    int roll() {
-        int result = randomGenerator.nextInt(sides) + 1;
-        currentSide = result;
-        return result;
+    void roll() {
+        currentSide = randomGenerator.nextInt(sides) + 1;
     }
     //Gettermetod till currentSides.
     public int getCurrentSide() {

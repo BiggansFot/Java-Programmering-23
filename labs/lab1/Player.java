@@ -18,8 +18,8 @@ public class Player {
             this.points = points;
         } */
         //Rullar player-tärningen.
-        int rollDice() {
-            return die.roll();
+        void rollDice() {
+            die.roll();
         }
         //Hämtar resultatet av player tärningens nuvarande värde.
         public int getDiceValue() {
